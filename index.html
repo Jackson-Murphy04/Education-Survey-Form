@@ -1,0 +1,262 @@
+<!-- setup basic html structure -->
+<!DOCTYPE html>
+<!-- add html tags and specify langaguge -->
+<html lang='en'>
+	<!-- create header section for title and css info -->
+	<header>
+		<title>School System Survey</title>
+		<link rel='stylesheet' type='text/css' href='Survey-stylesheet.css'></header>
+	</header>
+	<!-- body section fo all visual elements -->
+	<Body>
+		<!-- add script for fcc tests -->
+		<div id='FCC-Tests'>
+			<script src='https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js'></script>
+		</div>
+		<!-- header for title and short discription -->
+		<header id='title-discription'>
+			<h1 id='title'>U.S. School System Survey</h1>
+			<p id='description'>Thank you for taking the time to help us in school reform.</p>
+		</header>
+		<!-- add main section for form -->
+		<main>
+			<!-- add form -->
+			<form id='survey-form'>
+				<!-- get name through input -->
+				<section id='name-input' class='form-group'>
+					<label id='name-label' for='name'>Name</label>
+					<input 
+						id='name'
+						class='form-control'
+						type='text'
+						name='name'
+						placeholder='Enter Your Name'
+						required
+					/>
+				</section>
+				<!-- get email through input -->
+				<section id='email-input' class='form-group'>
+					<label id='email-label' for='email'>Email</label>
+					<input
+						id='email'
+						class='form-control'
+						name='email'
+						type='email'
+						placeholder='Enter Your Email'
+						required
+					/>
+				</section>
+				<!-- get age thorugh input -->
+				<section id='age-input' class='form-group'>
+					<label id='number-label' for='number'>Age<span class="clue">(optional)</span></label>
+					<input 
+						id='number'
+						name='age'
+						class='form-control'
+						type='number'
+						placeholder='Age (optional)'
+						min='0'
+						max='20'
+					/>
+				</section>
+				<!-- get level of education through dropdown selection -->
+				<section id='education-level-selection' class='form-group'>
+					<p>What best describes your level of education?</p>
+					<select
+						id='dropdown'
+						class='form-control'
+						name='education-level'
+						required>
+						<option disabled selected value>Select Highest Achived</option>
+						<option value='elementary'>Elementary School</option>
+						<option value='middle school'>Middle School</option>
+						<option value='high school'>High School</option>
+						<option value='college'>College</option>
+					</select>
+				</section>
+				<!-- get info of experince through radio buttons -->
+				<section id='experince' class='form-group'>
+					<p>How was your schooling experince?</p>
+					<label id='good-button'>
+						<input
+							name='user-experince'
+							id='good-input'
+							class='radio-input'
+							type='radio'
+							value='good'
+						/>
+						Good
+					</label>
+					<label id='ok-button'>
+						<input 
+							name='user-experince'
+							id='ok-input'
+							class='radio-input'
+							type='radio'
+							value='ok'
+							checked
+						/>
+						Ok
+					</label>
+					<label id='bad-button'>
+						<input 
+							name='user-experince'
+							id='bad-input'
+							class='radio-input'
+							type='radio'
+							value='bad'
+						/>
+						Bad! (Something needs to change)
+					</label>
+				</section>
+				<!-- get type of education (privte, public, border student) through dropdown selection -->
+				<section id='education-type' class='form-group'>
+					<p>What best describes the type of education you experinced?</p>
+					<select
+						id='type-dropdown'
+						class='form-control'
+						name='education-type'
+						required>
+						<option disabled selected value>Select Most Accurate Type</option>
+						<option value='public'>Public School</option>
+						<option value='private'>Private School</option>
+						<option value='border'>Border Student</option>
+						<option value='military'>Military School</option>
+						<option value='home'>Home Schooled</option>
+					</select>
+				</section>
+				<!-- get info on what needs to change through checkboxes -->
+				<section id='needs-change' class='form-group'>
+					<p>What issues are the most pressing and in need of improvment?<span class="clue">(Check all that apply)</span></p>
+					<label id='saftey-box'>
+'						<input 
+							name='choice'
+							class='input-checkbox'
+							type='checkbox'
+							value='saftey'
+						/>
+						School Saftey Improvment
+					</label>
+					<br>
+					<label id='technology-box'>
+'						<input 
+							name='choice'
+							class='input-checkbox'
+							type='checkbox'
+							value='technology'
+						/>
+						Technological Advacment
+					</label>
+					<br>
+					<label id='common-core-box'>
+'						<input 
+							name='choice'
+							class='input-checkbox'
+							type='checkbox'
+							value='common-core'
+						/>
+						Common Core Curricular Improvment
+					</label>
+					<br>
+					<label id='teacher-salary-box'>
+'						<input 
+							name='choice'
+							class='input-checkbox'
+							type='checkbox'
+							value='teacher-salary'
+						/>
+						Raise Teacher Salaries
+					</label>
+					<br>
+					<label id='less-importance-test-box'>
+'						<input 
+							name='choice'
+							class='input-checkbox'
+							type='checkbox'
+							value='less-importance-test'
+						/>
+						Lower Importance of Standard Tests.
+					</label>
+					<br>
+					<label id='bullying-box'>
+'						<input 
+							name='choice'
+							class='input-checkbox'
+							type='checkbox'
+							value='bullying'
+						/>
+						Lower Bullying/Violence
+					</label>
+					<br>
+					<label id='overcrowding-boc'>
+'						<input 
+							name='choice'
+							class='input-checkbox'
+							type='checkbox'
+							value='overcrowding'
+						/>
+						Lower Overcrowding
+					</label>
+					<br>
+					<label id='mental-health-box'>
+'						<input 
+							name='choice'
+							class='input-checkbox'
+							type='checkbox'
+							value='mental-health'
+						/>
+						Improve Mental Health of Students
+					</label>
+					<br>
+					<label id='parental-involvment-box'>
+'						<input 
+							name='choice'
+							class='input-checkbox'
+							type='checkbox'
+							value='parental-involvment'
+						/>
+						Increase Parental Involvment 
+					</label>
+					<br>
+					<label id='outdated-teaching-box'>
+'						<input 
+							name='choice'
+							class='input-checkbox'
+							type='checkbox'
+							value='outdated-teaching'
+						/>
+						Improve On Outdated Teaching Methods
+					</label>
+				</section>
+				<!-- final area for people to leve final thoughts and suggestions -->
+				<section id='text-area' class='form-group'>
+					<p>Any final comments or suggestions?</p>
+					<textarea 
+						id='final-thoughts'
+						class='input-textarea'
+						name='comment'
+						placeholder='Type here...'>
+					</textarea>
+				</section>
+				<!-- add submit button -->
+				<section id='submit-button' class='form-group'>
+					<button 
+						type='submit' 
+						id='submit' 
+						class='submit-buttton'>
+						Submit
+					</button>
+				</section>
+			</form>
+		</main>
+</html>
+
+
+
+
+
+
+
+
+
+
